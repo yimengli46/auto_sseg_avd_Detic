@@ -22,8 +22,9 @@ def get_clip_embeddings(vocabulary, prompt='a '):
     emb = text_encoder(texts).detach().permute(1, 0).contiguous().cpu()
     return emb
 
+
 BUILDIN_CLASSIFIER = {
-    'lvis': 'datasets/metadata/lvis_v1_clip_a+cname.npy',
+    'lvis': '../auto_sseg_avd_Detic/datasets/metadata/lvis_v1_clip_a+cname.npy',
     'objects365': 'datasets/metadata/o365_clip_a+cnamefix.npy',
     'openimages': 'datasets/metadata/oid_clip_a+cname.npy',
     'coco': 'datasets/metadata/coco_clip_a+cname.npy',
@@ -36,9 +37,10 @@ BUILDIN_METADATA_PATH = {
     'coco': 'coco_2017_val',
 }
 
+
 class VisualizationDemo(object):
-    def __init__(self, cfg, args, 
-        instance_mode=ColorMode.IMAGE, parallel=False):
+    def __init__(self, cfg, args,
+                 instance_mode=ColorMode.IMAGE, parallel=False):
         """
         Args:
             cfg (CfgNode):
