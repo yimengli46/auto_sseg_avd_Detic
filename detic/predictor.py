@@ -27,7 +27,7 @@ BUILDIN_CLASSIFIER = {
     'lvis': '../auto_sseg_avd_Detic/datasets/metadata/lvis_v1_clip_a+cname.npy',
     'objects365': 'datasets/metadata/o365_clip_a+cnamefix.npy',
     'openimages': 'datasets/metadata/oid_clip_a+cname.npy',
-    'coco': 'datasets/metadata/coco_clip_a+cname.npy',
+    'coco': '../auto_sseg_avd_Detic/datasets/metadata/coco_clip_a+cname.npy',
 }
 
 BUILDIN_METADATA_PATH = {
